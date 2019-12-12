@@ -9,3 +9,18 @@ context.scale(dpr, dpr);
 
 context.lineCap = 'square';
 context.lineWidth = 2;
+
+function draw(x, y, width, height) {
+	if (Math.random() >= 0.5) {
+		context.moveTo(x, y);
+		context.lineTo(x + width, y + height);
+	
+	} else {
+		context.moveTo(x + width, y);
+		context.lineTo(x, y + height);
+	}
+
+	context.stroke();
+}
+
+draw(0, 0, size, size);
